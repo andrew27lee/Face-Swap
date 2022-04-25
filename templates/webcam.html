@@ -70,8 +70,8 @@
                 return data;
             }
 
-            const FPS = 3;
-            const ws = new WebSocket('wss://master-face-swap-andrew27lee.endpoint.ainize.ai/echo');
+            const FPS = 0.5;
+            const ws = new WebSocket('ws://localhost:5000/echo');
 
             ws.onopen = () => {
                 setInterval(() => {

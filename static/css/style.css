@@ -163,6 +163,12 @@ header {
     width: 100%;
 }
 
+.logo {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
 .nav-toggle {
     position: absolute !important;
     top: -9999px !important;
@@ -170,7 +176,7 @@ header {
 }
 
 .nav-toggle:focus ~ .nav-toggle-label {
-    outline: 3px solid rgba(lightblue, .75);
+    outline: 3px solid rgba(white, .75);
 }
 
 .nav-toggle-label {
@@ -241,7 +247,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #000;
+    color: orange;
 }
 
 .nav-toggle:checked ~ nav {
@@ -302,7 +308,7 @@ nav a:hover {
         content: '';
         display: block;
         height: 5px;
-        background: black;
+        background: orange;
         position: absolute;
         top: -.75em;
         left: 0;
