@@ -51,6 +51,12 @@
 
 /* Home Formatting */
 
+.homeLogo {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
 .verticalCenter {
     position: absolute;
     top: 50%;
@@ -259,6 +265,9 @@ nav a:hover {
   
     .logo {
         grid-column: 2 / 3;
+        max-width: 100%;
+        height: auto;
+        width: auto\9;
     }
   
     nav {
