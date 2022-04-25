@@ -53,15 +53,9 @@ def __image_swap():
 def __live_swap(dst_img):
     src_img = cv2.imread(SOURCE_PATH)
 
-    try: 
-        dst_faceBoxes = select_all_faces(dst_img)
-        if dst_faceBoxes is None:
-            return 'No face was detected.'
-
+    try:
         src_points, _, src_face = select_face(src_img)
-
-        if src_points is None:
-            return 'No face was detected.'
+        dst_faceBoxes = select_all_faces(dst_img)
 
         output = dst_img
 
