@@ -1,3 +1,7 @@
-dlib >= 19.9.0
-numpy >= 1.13.1
-scipy >= 0.18.0
+dlib==19.23.1
+numpy==1.22.3
+scipy==1.8.0
+Pillow==9.1.0
+opencv-python==3.4.17.63
+Flask==2.1.1
+flask-sock==0.5.2

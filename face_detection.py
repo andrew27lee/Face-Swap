@@ -3,7 +3,7 @@ import dlib
 import numpy as np
 
 ## Face detection
-def face_detection(img,upsample_times=1):
+def face_detection(img, upsample_times=1):
     # Ask the detector to find the bounding boxes of each face. The 1 in the
     # second argument indicates that we should upsample the image 1 time. This
     # will make everything bigger and allow us to detect more faces.
@@ -19,26 +19,26 @@ def face_points_detection(img, bbox:dlib.rectangle):
     # Get the landmarks/parts for the face in box d.
     shape = predictor(img, bbox)
 
-    # loop over the 68 facial landmarks and convert them
+    # Loop over the 68 facial landmarks and convert them
     # to a 2-tuple of (x, y)-coordinates
     coords = np.asarray(list([p.x, p.y] for p in shape.parts()), dtype=np.int)
 
-    # return the array of (x, y)-coordinates
+    # Return the array of (x, y)-coordinates
     return coords
 
-def select_face(im, r=10, choose=True):
+def select_face(im, r=10):
     faces = face_detection(im)
 
     if len(faces) == 0:
         return None, None, None
 
-    if len(faces) == 1 or not choose:
+    if len(faces) == 1:
         idx = np.argmax([(face.right() - face.left()) * (face.bottom() - face.top()) for face in faces])
         bbox = faces[idx]
     else:
         bbox = []
 
-        def click_on_face(event, x, y, flags, params):
+        def click_on_face(event, x, y):
             if event != cv2.EVENT_LBUTTONDOWN:
                 return
 
@@ -49,7 +49,7 @@ def select_face(im, r=10, choose=True):
 
         im_copy = im.copy()
         for face in faces:
-            # draw the face bounding box
+            # Draw the face bounding box
             cv2.rectangle(im_copy, (face.left(), face.top()), (face.right(), face.bottom()), (0, 0, 255), 1)
         cv2.imshow('Click the Face:', im_copy)
         cv2.setMouseCallback('Click the Face:', click_on_face)
@@ -68,7 +68,6 @@ def select_face(im, r=10, choose=True):
     w, h = min(right + r, im_h) - x, min(bottom + r, im_w) - y
 
     return points - np.asarray([[x, y]]), (x, y, w, h), im[y:y + h, x:x + w]
-
 
 def select_all_faces(im, r=10):
     faces = face_detection(im)

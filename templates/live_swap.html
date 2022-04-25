@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Face Swap - Live Swap</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/style.css">
+    </head>
+
+    <body class="swapBody">
+        <header>
+            <img src="../static/images/misc/logo.png" alt="logo" class="logo" width="325" height="80">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                    <li><a href="{{ url_for('image') }}">Image</a></li>
+                    <li><a href="{{ url_for('live') }}">Live</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+
+        <div class="content">
+            <center>
+                <h1>Live Swap</h1>
+
+                <form name="liveInputForm" id="liveInputForm" method="POST" action="/live/swap" enctype="multipart/form-data">
+                    <label for="file">Source:</label>
+                    <input type="file" name="src" accept=".jpg,.jpeg,.png">
+                    <p></p>
+                    <button class="submitButton" type="submit" onclick="submit()">Swap</button>
+                </form>
+
+                {% if error %}
+                <h2>Error</h2>
+                <p>{{ error }} Please try again!</p>
+                {% endif %}
+            </center>
+        </div>
+
+        <script>
+        </script>
+    </body>
+</html>
