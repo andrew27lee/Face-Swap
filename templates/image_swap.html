@@ -12,7 +12,7 @@
 
     <body class="swapBody">
         <header>
-            <img src="../static/images/misc/logo.png" class="logo" width="325" height="80">
+            <img src="../static/images/misc/logo.png" class="logo">
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <nav>
                 <ul>
@@ -29,7 +29,7 @@
 
         <div class="content">
             <center>
-                <h1>Image Swap</h1>
+                <h1 class="swapTitle">Image Swap</h1>
 
                 <form name="imageInputForm" id="imageInputForm" method="POST" action="/image/swap" enctype="multipart/form-data">
                     <label for="file">Source:</label>
@@ -44,21 +44,21 @@
                 {% if image %}
                 <div class="row">
                     <div class="column">
-                        <h2>Source</h2>
+                        <h2 class="swapHeader">Source</h2>
                         <img src="../static/images/input/src.jpg" width="240" height="320">
                     </div>
                     <div class="column">
-                        <h2>Destination</h2>
+                        <h2 class="swapHeader">Destination</h2>
                         <img src="../static/images/input/dst.jpg" width="240" height="320">
                     </div>
                     <div class="column">
-                        <h2>Result</h2>
+                        <h2 class="swapHeader">Result</h2>
                         <img src="../static/images/output/swapped.jpg" width="240" height="320">
                     </div>
                 </div>
                 {% elif error %}
-                <h2>Error</h2>
-                <p>{{ error }} Please try again!</p>
+                <h2 class="swapHeader">Error</h2>
+                <p class="swapText">{{ error }} Please try again!</p>
                 {% endif %}
             </center>
         </div>

@@ -12,7 +12,7 @@
 
     <body class="swapBody">
         <header>
-            <img src="../static/images/misc/logo.png" class="logo" width="325" height="80">
+            <img src="../static/images/misc/logo.png" class="logo">
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <nav>
                 <ul>
@@ -29,7 +29,7 @@
 
         <div class="content">
             <center>
-                <h1>Live Swap</h1>
+                <h1 class="swapTitle">Live Swap</h1>
 
                 <form name="liveInputForm" id="liveInputForm" method="POST" action="/live/swap" enctype="multipart/form-data">
                     <label for="file">Source:</label>
@@ -40,15 +40,15 @@
 
                 <div class="row">
                     <div class="column">
-                        <h2>Source</h2>
+                        <h2 class="swapHeader">Source</h2>
                         <img src="../static/images/input/src.jpg" width="240" height="320">
                     </div>
                     <div class="column">
-                        <h2>Destination</h2>
+                        <h2 class="swapHeader">Destination</h2>
                         <video id="dstStream" autoplay></video>
                     </div>
                     <div class="column">
-                        <h2>Result</h2>
+                        <h2 class="swapHeader">Result</h2>
                         <img id="resultStream" src="">
                     </div>
                 </div>

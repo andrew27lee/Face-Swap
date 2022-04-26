@@ -63,7 +63,6 @@ def __live_swap(dst_img):
             output = face_swap(src_face, dst_face["face"], src_points,
                             dst_face["points"], dst_face["shape"],
                             output)
-
         return output
     except:
         pass

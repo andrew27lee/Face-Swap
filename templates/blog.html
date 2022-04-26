@@ -12,7 +12,7 @@
 
     <body class="blogBody">
         <header>
-            <img src="../static/images/misc/logo.png" class="logo" width="325" height="80">
+            <img src="../static/images/misc/logo.png" class="logo">
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <nav>
                 <ul>
@@ -27,8 +27,65 @@
             </label>
         </header>
 
-        <div class="content">
-
+        <div class="content" id="blogContent">
+            <div class="blogHeader">
+                <img src="../static/images/misc/logo.png" class="homeLogo">
+            </div>
+            <div class="blogRow">
+                <div class="leftColumn">
+                    <div class="card">
+                        <h2 class="blogSection">Introduction</h2>
+                        <p class="blogText">Swap the face from one image onto the face(s) of another 
+                            image or your own face using Python 3 with OpenCV and dlib.</p>
+                    </div>
+                    <div class="card">
+                        <h2 class="blogSection">How It Works</h2>
+                        <p class="blogText"></p>
+                    </div>
+                    <div class="card">
+                        <h2 class="blogSection">Examples</h2>
+                        <table>
+                            <tr>
+                                <th>Source</th>
+                                <th>Destination</th>
+                                <th>Result</th>
+                            </tr>
+                            <tr>
+                                <td><img src="static/images/input/test1.jpg" class="blogIMG"/></td>
+                                <td><img src="static/images/input/test2.jpg" class="blogIMG"/></td>
+                                <td><img src="static/images/output/test1_2.jpg" class="blogIMG"/></td>
+                            </tr>
+                            <tr>
+                                <td><img src="static/images/input/test3.jpg" class="blogIMG"/></td>
+                                <td><img src="static/images/input/test4.jpg" class="blogIMG"/></td>
+                                <td><img src="static/images/output/test3_4.jpg" class="blogIMG"/></td>
+                            </tr>
+                            <tr>
+                                <td><img src="static/images/input/test5.jpg" class="blogIMG"/></td>
+                                <td><img src="static/images/input/test6.jpg" class="blogIMG"/></td>
+                                <td><img src="static/images/output/test5_6.jpg" class="blogIMG"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="rightColumn">
+                    <div class="card">
+                        <h2 class="blogSection">Ainize</h2>
+                        <p class="blogText">This project has been deployed on Ainize. Ainize is an 
+                            all-in-one platform for simple AI development. Ainize Deploy allows users 
+                            to run the latest open-source AI models with just one click; no need for 
+                            any complex development environment or expensive GPU infrastructure.</p>
+                    </div>
+                    <div class="card">
+                        <h2 class="blogSection">References</h2>
+                        <div class="projectInfoBlog">
+                            <a class="blogLinks" href="https://github.com/andrew27lee/Face-Swap">Github</a>
+                            <a class="blogLinks" href="https://ainize.ai/andrew27lee/Face-Swap?branch=master">Ainize</a>
+                        </div>
+                        <p class="blogText"></p>  
+                    </div>
+                </div>
+            </div>        
         </div>
 
         <script>
