@@ -11,8 +11,6 @@
 .homeBody {
     margin: 0;
     background-image: url('../images/misc/dark_background.jpg');
-    background-attachment: fixed;
-    background-blend-mode: multiply;
     background-size: cover;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -21,7 +19,6 @@
 .blogBody {
     margin: 0;
     background-color: whitesmoke;
-    background-blend-mode: multiply;
     background-size: cover;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -30,8 +27,6 @@
 .swapBody {
     margin: 0;
     background-image: url('../images/misc/light_background.jpg');
-    background-attachment: fixed;
-    background-blend-mode: multiply;
     background-size: cover;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -39,6 +34,7 @@
   
 .content {
     padding-top: 100px;
+    padding-bottom: 20px;
 }
 
 .booth {
@@ -135,12 +131,15 @@
 }
 
 .blogSection {
+    font-size: 24px;
+    font-family: Verdana;
     color: royalblue;
 }
 
 .blogText {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    font-family: Verdana;
+    line-height: 26px;
 }
 
 .blogLinks:link {
@@ -170,7 +169,7 @@
 
 .projectInfoBlog {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
     text-decoration: none;
     color: black;
 }
@@ -186,10 +185,19 @@ table, th, td {
 }
 
 @media screen and (max-width: 500px) {
+    .blogHeader {
+        padding: 20px;
+    }
+
+    .homeLogo {
+        max-width: 100%;
+        width: 250px;
+    }
+
     .blogIMG {
         max-width: 100%;
-        width: 100px;
-        height: 135px;
+        width: 115px;
+        height: 150px;
     }
 }
 
@@ -264,7 +272,7 @@ header {
 
 .logo {
     max-width: 100%;
-    width: 225px;
+    width: 250px;
 }
 
 .nav-toggle {
